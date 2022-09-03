@@ -18,6 +18,13 @@
 
 ## Introduction 前言
 
+軟體工程原理，來自Robert C. Martin的書《
+[*Clean Code 乾淨原始碼*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)》,
+適用於Python。這並不是一個風格指南。這是一個產出更易讀、更易用，和更易重構的Python軟體。
+
+並非每一個原理都必需嚴格遵守，甚至更少數的原理並不是那麼普遍地被同意。這只是指南而已，但他們都被*Clean Code 乾淨程式碼*的作者
+多年來的經驗搜集並
+
 Software engineering principles, from Robert C. Martin's book
 [*Clean Code*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882),
 adapted for Python. This is not a style guide. It's a guide to producing
