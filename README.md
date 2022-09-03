@@ -1,22 +1,22 @@
-# clean-code-python
+# 乾淨程式碼-python
 
 [![Build Status](https://travis-ci.com/zedr/clean-code-python.svg?branch=master)](https://travis-ci.com/zedr/clean-code-python)
 [![](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/download/releases/3.8.3/)
 
-## Table of Contents
-  1. [Introduction](#introduction)
-  2. [Variables](#variables)
-  3. [Functions](#functions)
-  5. [Classes](#classes)
-     1. [S: Single Responsibility Principle (SRP)](#single-responsibility-principle-srp)
-     2. [O: Open/Closed Principle (OCP)](#openclosed-principle-ocp)
-     3. [L: Liskov Substitution Principle (LSP)](#liskov-substitution-principle-lsp)
-     4. [I: Interface Segregation Principle (ISP)](#interface-segregation-principle-isp)
-     5. [D: Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
-  6. [Don't repeat yourself (DRY)](#dont-repeat-yourself-dry)
-  7. [Translation](#translation)
+## 內容列表
+  1. [Introduction 前言](#introduction-前言)
+  2. [Variables 變數](#variables-變數)
+  3. [Functions 函式](#functions-函式)
+  5. [Classes 類別](#classes-類別)
+     1. [S: Single Responsibility Principle (SRP) 單一功能原則](#single-responsibility-principle-srp-單一功能原則)
+     2. [O: Open/Closed Principle (OCP) 開閉原則](#openclosed-principle-ocp-開閉原則)
+     3. [L: Liskov Substitution Principle (LSP) 里氏替換原則](#liskov-substitution-principle-lsp-里氏替換原則)
+     4. [I: Interface Segregation Principle (ISP) 介面隔離原則](#interface-segregation-principle-isp-介面隔離原則)
+     5. [D: Dependency Inversion Principle (DIP) 依賴反轉原則](#dependency-inversion-principle-dip-依賴反轉原則)
+  6. [Don't repeat yourself (DRY) 別再重複做一次](#dont-repeat-yourself-dry-別再重複做一次)
+  7. [Translation 翻譯](#translations-翻譯)
 
-## Introduction
+## Introduction 前言
 
 Software engineering principles, from Robert C. Martin's book
 [*Clean Code*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882),
@@ -31,7 +31,7 @@ Inspired from [clean-code-javascript](https://github.com/ryanmcdermott/clean-cod
 
 Targets Python3.7+
 
-## **Variables**
+## **Variables 變數**
 ### Use meaningful and pronounceable variable names
 
 **Bad:**
@@ -264,7 +264,7 @@ def create_micro_brewery(name: str = "Hipster Brew Co."):
 ```
 
 **[⬆ back to top](#table-of-contents)**
-## **Functions**
+## **Functions 函式**
 ### Function arguments (2 or fewer ideally)
 Limiting the amount of function parameters is incredibly important because it makes
 testing your function easier. Having more than three leads to a combinatorial explosion
@@ -745,9 +745,9 @@ print(person.name_as_first_and_last)  # => ["Ryan", "McDermott"]
 
 **[⬆ back to top](#table-of-contents)**
 
-## **Classes**
+## **Classes 類別**
 
-### **Single Responsibility Principle (SRP)**
+### **Single Responsibility Principle (SRP) 單一功能原則**
 
 Robert C. Martin writes:
 
@@ -820,7 +820,7 @@ accepts a string.
 
 As an added bonus, the `get_version()` is now reusable elsewhere.
 
-### **Open/Closed Principle (OCP)**
+### **Open/Closed Principle (OCP) 開閉原則**
 
 > “Incorporate new features  by extending the system, not by making
 > modifications (to it)”,
@@ -1035,7 +1035,7 @@ views.
 FIXME: re-enable typechecking for the line above once it's clear how to use
 `typing.Protocol` to make the type checker work with Mixins.
 
-### **Liskov Substitution Principle (LSP)**
+### **Liskov Substitution Principle (LSP) 里氏替換原則**
 
 > “Functions that use pointers or references to base classes
 > must be able to use objects of derived classes without knowing it”,
@@ -1123,7 +1123,7 @@ error: Signature of "get" incompatible with supertype "View"
 <string>:36: note:          def get(self, request: Any, template_file: str) -> Response
 ```
 
-### **Interface Segregation Principle (ISP)**
+### **Interface Segregation Principle (ISP) 介面隔離原則**
 
 > “Keep interfaces small
 > so that users don’t end up depending on things they don’t need.”,
@@ -1293,7 +1293,7 @@ def view(request):
 
 ```
 
-### **Dependency Inversion Principle (DIP)**
+### **Dependency Inversion Principle (DIP) 依賴反轉原則**
 
 > “Depend upon abstractions, not concrete details”,
 > Uncle Bob.
@@ -1388,7 +1388,7 @@ by this author.
 
 **[⬆ back to top](#table-of-contents)**
 
-## **Don't repeat yourself (DRY)**
+## **Don't repeat yourself (DRY) 別再重複做一次**
 
 Try to observe the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle.
 
@@ -1530,11 +1530,12 @@ company_managers_list = get_employee_list(employees=company_managers)
 
 **[⬆ back to top](#table-of-contents)**
 
-## **Translations**
+## **Translations 翻譯**
 
 This document is also available in other languages:
 
 - :pt: :br: **Portugese** [fredsonchaves07/clean-code-python](https://github.com/fredsonchaves07/clean-code-python)
 - :iran: **Persian:** [https://github.com/SepehrRasouli/clean-code-python](https://github.com/SepehrRasouli/clean-code-python)
+- :taiwan: **Traditional Chinese 繁體中文:** [https://github.com/as209099/clean-code-python](https://github.com/as209099/clean-code-python)
 
 **[⬆ back to top](#table-of-contents)**
