@@ -52,10 +52,10 @@ current_date: str = datetime.date.today().strftime("%y-%m-%d")
 ```
 **[⬆ 返回頂部](#內容列表)**
 
-### Use the same vocabulary for the same type of variable
+### 對於相同類型的變數，使用相同單字
 
-**Bad:**
-Here we use three different names for the same underlying entity:
+**不恰當:**
+這是我們對於相同意思的實體，所使用的三種不同單字名稱
 
 ```python
 def get_user_info(): pass
@@ -63,8 +63,9 @@ def get_client_data(): pass
 def get_customer_record(): pass
 ```
 
-**Good**:
-If the entity is the same, you should be consistent in referring to it in your functions:
+**恰當**:
+
+如果是相同的實體，你應該在函式裡持續地使用相同的名稱
 
 ```python
 def get_user_info(): pass
@@ -72,9 +73,8 @@ def get_user_data(): pass
 def get_user_record(): pass
 ```
 
-**Even better**
-Python is (also) an object oriented programming language. If it makes sense, package the functions together with the concrete implementation
-of the entity in your code, as instance attributes, property methods, or methods:
+**這樣更好**
+Python同時也是個物件導向程式語言。如果這樣做是合乎情理，可以將這些函式(functions)和實體實作的程式碼打包在一起，例如：實體屬性、屬性方法(property methods)，或是方法：
 
 ```python
 from typing import Union, Dict
@@ -95,15 +95,14 @@ class User:
         return Record()
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
-### Use searchable names
-We will read more code than we will ever write. It's important that the code we do write is
-readable and searchable. By *not* naming variables that end up being meaningful for
-understanding our program, we hurt our readers.
-Make your names searchable.
+### 使用易查詢的名字
+我們讀到的程式碼將會比此生寫過的還要更多，寫出易讀且易查詢的程式碼是非常重要的。
+如果*不命名*變數，會使想瞭解我們專案的讀者感到毫無意義，會傷害到我們的讀者。
+讓你的變數名字更易於查詢。
 
-**Bad:**
+**不恰當:**
 
 ```python
 import time
@@ -113,7 +112,7 @@ import time
 time.sleep(86400)
 ```
 
-**Good**:
+**恰當**:
 
 ```python
 import time
@@ -123,7 +122,7 @@ import time
 SECONDS_IN_A_DAY = 60 * 60 * 24
 time.sleep(SECONDS_IN_A_DAY)
 ```
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
 ### Use explanatory variables
 **Bad:**
