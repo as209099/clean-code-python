@@ -18,30 +18,20 @@
 
 ## Introduction 前言
 
-軟體工程原理，來自Robert C. Martin的書《
-[*Clean Code 乾淨原始碼*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)》,
-適用於Python。這並不是一個風格指南。這是一個產出更易讀、更易用，和更易重構的Python軟體。
+軟體工程原理，來自Robert C. Martin的《
+[*Clean Code 乾淨原始碼*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)》書中,
+且適用於Python。這並不是一個風格指南。這是一個指南用於幫助你產出更易讀、更易用，和更易重構的Python軟體。
 
-並非每一個原理都必需嚴格遵守，甚至更少數的原理並不是那麼普遍地被同意。這只是指南而已，但他們都被*Clean Code 乾淨程式碼*的作者
-多年來的經驗搜集並
+並非每一個原理都必需嚴格遵守，甚至部分的原理並不是那麼普遍地被大家認同。這只是指南而已，但他們都由《*Clean Code 乾淨程式碼*》的作者
+多年來的經驗搜集並編撰而成。
 
-Software engineering principles, from Robert C. Martin's book
-[*Clean Code*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882),
-adapted for Python. This is not a style guide. It's a guide to producing
-readable, reusable, and refactorable software in Python.
+啟發自 [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
 
-Not every principle herein has to be strictly followed, and even fewer will be universally
-agreed upon. These are guidelines and nothing more, but they are ones codified over many
-years of collective experience by the authors of *Clean Code*.
-
-Inspired from [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
-
-Targets Python3.7+
+使用 Python 3.7+版本
 
 ## **Variables 變數**
-### Use meaningful and pronounceable variable names
-
-**Bad:**
+### 使用有意義且可發音的變數名稱
+**不恰當:**
 
 ```python
 import datetime
@@ -50,9 +40,9 @@ import datetime
 ymdstr = datetime.date.today().strftime("%y-%m-%d")
 ```
 
-Additionally, there's no need to add the type of the variable (str) to its name.
+此外，變數名稱沒必要加入它自己本身的型態名稱(str)
 
-**Good**:
+**恰當**:
 
 ```python
 import datetime
@@ -60,7 +50,7 @@ import datetime
 
 current_date: str = datetime.date.today().strftime("%y-%m-%d")
 ```
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
 ### Use the same vocabulary for the same type of variable
 
