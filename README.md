@@ -124,8 +124,8 @@ time.sleep(SECONDS_IN_A_DAY)
 ```
 **[⬆ 返回頂部](#內容列表)**
 
-### Use explanatory variables
-**Bad:**
+### 使用帶有解釋性意義的變數
+**不恰當:**
 
 ```python
 import re
@@ -139,9 +139,9 @@ if matches:
     print(f"{matches[1]}: {matches[2]}")
 ```
 
-**Not bad**:
+**還不錯**:
 
-It's better, but we are still heavily dependent on regex.
+這算是還不錯，但我們在regex上仍然有很重的依賴性
 
 ```python
 import re
@@ -156,9 +156,9 @@ if matches:
     print(f"{city}: {zip_code}")
 ```
 
-**Good**:
+**恰當**:
 
-Decrease dependence on regex by naming subpatterns.
+將小型的行為模式透過命名方式降低整體依賴性
 
 ```python
 import re
@@ -171,13 +171,13 @@ matches = re.match(city_zip_code_regex, address)
 if matches:
     print(f"{matches['city']}, {matches['zip_code']}")
 ```
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
-### Avoid Mental Mapping
-Don’t force the reader of your code to translate what the variable means.
-Explicit is better than implicit.
+### 避免心理地圖
+不要強迫閱讀你的程式碼的人自行去解讀變數名稱的意思
+明確表達永遠比含糊的好很多
 
-**Bad:**
+**不恰當:**
 
 ```python
 seq = ("Austin", "New York", "San Francisco")
@@ -190,7 +190,7 @@ for item in seq:
     print(item)
 ```
 
-**Good**:
+**恰當**:
 
 ```python
 locations = ("Austin", "New York", "San Francisco")
@@ -201,15 +201,12 @@ for location in locations:
     # ...
     print(location)
 ```
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
+### 別加入不需要的內容
+如果你的類別(class)或物件(object)已經表示什麼含意，就別在你的變數名稱中重複表達相同含義
 
-### Don't add unneeded context
-
-If your class/object name tells you something, don't repeat that in your
-variable name.
-
-**Bad:**
+**不恰當:**
 
 ```python
 class Car:
@@ -218,7 +215,7 @@ class Car:
     car_color: str
 ```
 
-**Good**:
+**恰當**:
 
 ```python
 class Car:
@@ -227,13 +224,13 @@ class Car:
     color: str
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
-### Use default arguments instead of short circuiting or conditionals
+### 使用預設的參數(arguments)，別用簡短的邏輯(circuiting)表達或條件(conditionals)表達
 
-**Tricky**
+**小技巧**
 
-Why write:
+如何寫:
 
 ```python
 import hashlib
@@ -245,10 +242,10 @@ def create_micro_brewery(name):
     # etc.
 ```
 
-... when you can specify a default argument instead? This also makes it clear that
-you are expecting a string as the argument.
+... 什麼時機你可以使用預設參數(default argument)代替? 當你期望將一個字串(string)視為參數(argument)時，
+這會使整體意思更清晰。
 
-**Good**:
+**恰當**:
 
 ```python
 import hashlib
@@ -259,7 +256,8 @@ def create_micro_brewery(name: str = "Hipster Brew Co."):
     # etc.
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
+
 ## **Functions 函式**
 ### Function arguments (2 or fewer ideally)
 Limiting the amount of function parameters is incredibly important because it makes
