@@ -259,24 +259,23 @@ def create_micro_brewery(name: str = "Hipster Brew Co."):
 **[⬆ 返回頂部](#內容列表)**
 
 ## **Functions 函式**
-### Function arguments (2 or fewer ideally)
-Limiting the amount of function parameters is incredibly important because it makes
-testing your function easier. Having more than three leads to a combinatorial explosion
-where you have to test tons of different cases with each separate argument.
+### 函式參數(2個或更少較為理想)
+限制函數的參數數量是極為重要的，因為它會使你測試自己的函式更為方便。
+使用三個以上參數的爆炸組合會讓你必須測試一大堆不同的測試案例與不同參數。
 
-Zero arguments is the ideal case. One or two arguments is ok, and three should be avoided.
-Anything more than that should be consolidated. Usually, if you have more than two
-arguments then your function is trying to do too much. In cases where it's not, most
-of the time a higher-level object will suffice as an argument.
+最佳的案例是沒有參數。一個或兩個參數算是還可以，然後三個參數就應該避免。
+除此之外，如果再更多的參數就應該合併起來。通常，如果你使用三個以上的參數，
+代表你的函式嘗試做太多事情了。在沒有其他替代方案情況下，大多數使用一個高層級的物件(higher-level object)
+作為參數就足以滿足情況。
 
-**Bad:**
+**不恰當:**
 
 ```python
 def create_menu(title, body, button_text, cancellable):
     pass
 ```
 
-**Java-esque**:
+**Java-風格**:
 
 ```python
 class Menu:
@@ -295,7 +294,7 @@ menu = Menu(
 )
 ```
 
-**Also good**
+**這也不錯**
 
 ```python
 class MenuConfig:
@@ -329,7 +328,7 @@ config.cancellable = True
 create_menu(config)
 ```
 
-**Fancy**
+**優等**
 
 ```python
 from typing import NamedTuple
@@ -364,7 +363,7 @@ create_menu(
 )
 ```
 
-**Even fancier**
+**更高級**
 
 ```python
 from dataclasses import astuple, dataclass
@@ -399,7 +398,7 @@ create_menu(
 )
 ```
 
-**Even fancier, Python3.8+ only**
+**超高級用法，限定 Python3.8+ **
 
 ```python
 from typing import TypedDict
@@ -435,7 +434,7 @@ create_menu(
     )
 )
 ```
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回頂部](#內容列表)**
 
 ### Functions should do one thing
 This is by far the most important rule in software engineering. When functions do more
